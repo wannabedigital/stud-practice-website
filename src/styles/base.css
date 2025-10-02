@@ -1,3 +1,13 @@
+:root {
+  --font-roboto: 'Roboto', sans-serif;
+}
+
 body {
-    background-color: rgb(182, 254, 254);
+  font-family: var(--font-roboto);
+  background-image: linear-gradient(to bottom right, #d9d9d9, #dfeff3);
+  min-height: 100vh;
+}
+
+a:hover {
+  opacity: 0.9;
 }
