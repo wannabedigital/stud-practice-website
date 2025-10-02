@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Deployed project
 
-link: [text](https://stud-practice-website.vercel.app/services)
+link: [Скорая помощь для вашей оргтехники](https://stud-practice-website.vercel.app/services)
