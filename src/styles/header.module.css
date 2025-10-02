@@ -8,6 +8,11 @@
   align-content: center;
 }
 
+.headerBackground {
+  align-content: center;
+  background-color: #2d2d2d;
+}
+
 .headerContent {
   max-width: 1280px;
   margin: 0 auto;
@@ -15,7 +20,7 @@
   justify-content: space-between;
 }
 
-.headerNav {
+.headerNavDesktop {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -49,4 +54,84 @@
   font-size: 18px;
   font-weight: 500;
   align-items: center;
+}
+
+.burgerButton {
+  width: 20px;
+  height: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+.headerNavMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 14px;
+    height: 70px;
+  }
+
+  .headerLogoContainer img {
+    width: 155px;
+    height: 20px;
+  }
+
+  .headerBackground {
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .headerContent {
+    margin: 0 16px;
+  }
+
+  .headerNavMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: fixed;
+    z-index: 1;
+    top: -100%;
+    width: 100%;
+    height: min-content;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background: #2d2d2d;
+    transition: top 0.3s ease;
+  }
+
+  .headerNavMobile.navOpen {
+    top: 70px;
+    border-top: 1px solid #1e40af;
+  }
+
+  .burgerButton {
+    display: flex;
+  }
+
+  .headerNavDesktop {
+    display: none;
+  }
+
+  .headerCall {
+    display: none;
+  }
 }
