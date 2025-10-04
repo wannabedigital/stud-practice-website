@@ -12,7 +12,7 @@ const HomeServices = () => {
   return (
     <section className={styles.homeServicesSection}>
       <div className={styles.homeServicesBackground}>
-        <Image src={'/img/home/office_bg.png'} alt="section bg" fill />
+        <Image src={'/img/home/office_bg.png'} alt="section bg" fill priority />
       </div>
       <div className={styles.homeServicesSectionContent}>
         <h1 className={styles.sectionTitle}>
@@ -28,11 +28,14 @@ const HomeServices = () => {
 
         <div className={styles.sectionText}>
           <p>
-            Добро пожаловать на сайт компании «Скорая помощь для вашей
+            Добро пожаловать на сайт компании
+            <br className={styles.mobileBrake} /> «Скорая помощь для вашей
             оргтехники».
             <br />
-            Мы осуществляем быструю и качественную заправку картриджей
-            принтеров, <br />а также ремонт оргтехники по городу Орск
+            Мы осуществляем быструю и качественную заправку
+            <br className={styles.mobileBrake} /> картриджей принтеров,
+            <br className={styles.desktopBreak} /> а также ремонт оргтехники
+            <br className={styles.mobileBrake} /> по городу Орск
           </p>
         </div>
 
@@ -76,12 +79,17 @@ const HomeServices = () => {
         </div>
         <div className={styles.sectionText}>
           <p>
-            Наша команда профессионалов обеспечивает качественный сервис:
+            Наша команда профессионалов обеспечивает
+            <br className={styles.mobileBrake} /> качественный сервис:
             <br />
-            заправку картриджей, ремонт принтеров, МФУ, мониторов и компьютеров,
-            <br />а также поставку расходных материалов с гарантией надежности.
+            заправку картриджей, ремонт принтеров, МФУ,
+            <br className={styles.mobileBrake} /> мониторов и компьютеров,
+            <br />а также поставку расходных материалов с гарантией{' '}
+            <br className={styles.mobileBrake} />
+            надежности.
             <br />
-            Мы ценим ваше время и предлагаем решения, соответствующие вашим
+            Мы ценим ваше время и предлагаем решения,
+            <br className={styles.mobileBrake} /> соответствующие вашим
             потребностям.
           </p>
         </div>
