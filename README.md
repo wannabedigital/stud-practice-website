@@ -1,6 +1,6 @@
 # Скорая помощь для вашей оргтехники
 
-**[Развернутый проект](https://stud-practice-website.vercel.app/services)**
+**[Развернутый проект](https://stud-practice-website.vercel.app/)**
 
 **[Макет в Figma](https://www.figma.com/design/YraxGrj96T0XAMPlVFJyX3/StudPraktika?node-id=0-1&t=WqoBUXLfYuthsfR4-1)**
 
