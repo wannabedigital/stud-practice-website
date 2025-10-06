@@ -29,13 +29,13 @@ const HomeServices = () => {
         <div className={styles.sectionText}>
           <p>
             Добро пожаловать на сайт компании
-            <br className={styles.mobileBrake} /> «Скорая помощь для вашей
+            <br className={styles.mobileBreak} /> «Скорая помощь для вашей
             оргтехники».
             <br />
             Мы осуществляем быструю и качественную заправку
-            <br className={styles.mobileBrake} /> картриджей принтеров,
+            <br className={styles.mobileBreak} /> картриджей принтеров,
             <br className={styles.desktopBreak} /> а также ремонт оргтехники
-            <br className={styles.mobileBrake} /> по городу Орск
+            <br className={styles.mobileBreak} /> по городу Орск
           </p>
         </div>
 
@@ -80,16 +80,15 @@ const HomeServices = () => {
         <div className={styles.sectionText}>
           <p>
             Наша команда профессионалов обеспечивает
-            <br className={styles.mobileBrake} /> качественный сервис:
+            <br className={styles.mobileBreak} /> качественный сервис:
             <br />
             заправку картриджей, ремонт принтеров, МФУ,
-            <br className={styles.mobileBrake} /> мониторов и компьютеров,
-            <br />а также поставку расходных материалов с гарантией{' '}
-            <br className={styles.mobileBrake} />
-            надежности.
+            <br className={styles.mobileBreak} /> мониторов и компьютеров,
+            <br />а также поставку расходных материалов
+            <br className={styles.mobileBreak} /> с гарантией надежности.
             <br />
             Мы ценим ваше время и предлагаем решения,
-            <br className={styles.mobileBrake} /> соответствующие вашим
+            <br className={styles.mobileBreak} /> соответствующие вашим
             потребностям.
           </p>
         </div>
