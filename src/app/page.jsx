@@ -8,6 +8,12 @@ import styles from '@styles/homePage.module.css';
 // Components
 import { DividerDesktop, DividerMobile } from '@/components/Dividers';
 
+const StyledText = ({ classN, text = 'Нет текста!!!!' }) => (
+  <div className={`${classN}`}>
+    <p>{text}</p>
+  </div>
+);
+
 const HomeServices = () => {
   return (
     <section className={styles.homeServicesSection}>
@@ -47,7 +53,10 @@ const HomeServices = () => {
               width={128}
               height={128}
             />
-            <h2 className={styles.serviceLinkTitle}>ЗАПРАВКА КАРТРИДЖЕЙ</h2>
+            <h2 className={styles.serviceLinkTitle}>
+              ЗАПРАВКА
+              <br /> КАРТРИДЖЕЙ
+            </h2>
           </Link>
           <Link href={'/services'} className={styles.serviceLink}>
             <Image
@@ -56,7 +65,10 @@ const HomeServices = () => {
               width={128}
               height={128}
             />
-            <h2 className={styles.serviceLinkTitle}>РЕМОНТ МОНИТОРОВ</h2>
+            <h2 className={styles.serviceLinkTitle}>
+              РЕМОНТ
+              <br /> МОНИТОРОВ
+            </h2>
           </Link>
           <Link href={'/services'} className={styles.serviceLink}>
             <Image
@@ -65,7 +77,10 @@ const HomeServices = () => {
               width={128}
               height={128}
             />
-            <h2 className={styles.serviceLinkTitle}>РЕМОНТ МФУ И ПРИНТЕРОВ</h2>
+            <h2 className={styles.serviceLinkTitle}>
+              РЕМОНТ МФУ
+              <br /> И ПРИНТЕРОВ
+            </h2>
           </Link>
           <Link href={'/services'} className={styles.serviceLink}>
             <Image
@@ -74,7 +89,10 @@ const HomeServices = () => {
               width={128}
               height={128}
             />
-            <h2 className={styles.serviceLinkTitle}>РЕМОНТ КОМПЬЮТЕРОВ</h2>
+            <h2 className={styles.serviceLinkTitle}>
+              РЕМОНТ
+              <br /> КОМПЬЮТЕРОВ
+            </h2>
           </Link>
         </div>
         <div className={styles.sectionText}>
@@ -98,9 +116,13 @@ const HomeServices = () => {
 };
 
 export default function Home() {
+  const testText =
+    'Наша команда профессионалов обеспечивает качественный сервис: заправку картриджей, ремонт принтеров, МФУ, мониторов и компьютеров, а также поставку расходных материалов с гарантией надежности. Мы ценим ваше время и предлагаем решения, соответствующие вашим потребностям.';
+
   return (
     <main className={styles.page}>
       <HomeServices />
+      {/* <StyledText classN={styles.testTextContainer} text={testText} /> */}
     </main>
   );
 }
