@@ -7,6 +7,7 @@
   font-size: 32px;
   font-weight: 800;
   text-align: center;
+  letter-spacing: 0.05em;
 }
 
 .sectionText {
@@ -82,11 +83,13 @@
   font-weight: 700;
   color: #2d2d2d;
   text-align: center;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {
   .sectionTitle {
     font-size: 16px;
+    letter-spacing: 0.02em;
   }
 
   .sectionText {
@@ -135,16 +138,6 @@
   .serviceLinkTitle {
     max-width: fit-content;
     font-size: 14px;
+    letter-spacing: 0.02em;
   }
-}
-
-.testTextContainer {
-  text-align: center;
-  font-size: 14px;
-  max-width: calc(100% - 32px);
-  margin: 0 auto;
-}
-
-.testTextContainer p {
-  text-wrap: pretty;
 }
