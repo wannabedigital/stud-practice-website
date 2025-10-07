@@ -20,6 +20,11 @@
   justify-content: space-between;
 }
 
+.headerLogoContainer img {
+  width: 380;
+  height: auto;
+}
+
 .headerNavDesktop {
   display: flex;
   align-items: center;
@@ -88,7 +93,7 @@
 
   .headerLogoContainer img {
     width: 155px;
-    height: 20px;
+    height: auto;
   }
 
   .headerBackground {

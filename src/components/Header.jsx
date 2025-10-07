@@ -25,10 +25,10 @@ const Header = () => {
         <div className={styles.headerContent}>
           <Link href={'/'} className={styles.headerLogoContainer}>
             <Image
-              src={'/img/logo.png'}
+              src={'/img/new_logo.svg'}
               alt={'logo'}
-              width={380}
-              height={49}
+              width={2435}
+              height={314}
               priority
             />
           </Link>

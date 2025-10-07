@@ -10,10 +10,10 @@ const FooterLeft = () => {
     <div className={styles.footerLeftContainer}>
       <div className={styles.footerLogoContainer}>
         <Image
-          src={'/img/logo.png'}
+          src={'/img/new_logo.svg'}
           alt="logo icon"
-          width={380}
-          height={49}
+          width={2435}
+          height={314}
           priority
         />
       </div>

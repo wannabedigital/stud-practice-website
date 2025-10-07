@@ -24,6 +24,11 @@
   gap: 20px;
 }
 
+.footerLogoContainer img {
+  width: 380px;
+  height: auto;
+}
+
 .footerLegal {
   display: flex;
   flex-direction: column;
@@ -102,7 +107,7 @@
 
   .footerLogoContainer img {
     width: 161px;
-    height: 21px;
+    height: auto;
   }
 
   .footerLegal {
