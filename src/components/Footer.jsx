@@ -14,7 +14,6 @@ const FooterLeft = () => {
           alt="logo icon"
           width={2435}
           height={314}
-          priority
         />
       </div>
       <div className={styles.footerLegal}>

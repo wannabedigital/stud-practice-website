@@ -8,6 +8,17 @@ body {
   min-height: 100vh;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.3s ease;
+}
+
+a:active,
+button:active {
+  opacity: 0.9;
+}
+
 a:hover {
   opacity: 0.9;
 }
