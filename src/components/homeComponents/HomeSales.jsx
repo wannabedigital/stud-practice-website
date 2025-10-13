@@ -1,5 +1,4 @@
 'use client';
-
 // Imports
 import Link from 'next/link';
 import { useState, useEffect, useMemo } from 'react';
@@ -64,7 +63,7 @@ const HomeSales = ({ sales = [] }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPage(prev => (!!(prev % totalPages) ? prev + 1 : 1));
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [totalPages]);
