@@ -10,7 +10,7 @@ import { SALES_API_URL } from '@/constants/salesData';
 export default async function Home() {
   try {
     const response = await fetch(SALES_API_URL, {
-      next: { revalidate: 3000 },
+      next: { revalidate: 60 },
     });
 
     const sales = await response.json();

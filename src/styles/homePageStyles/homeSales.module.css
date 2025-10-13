@@ -36,6 +36,77 @@
   letter-spacing: 0.05em;
 }
 
+.salesContainer {
+  width: 100%;
+  /* max-width: calc(100% - 120px); */
+  display: flex;
+}
+
+.saleContainer {
+  width: 100%;
+}
+
+.saleLink,
+.saleLink:hover {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.saleContainerTitle {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 30px;
+}
+
+.salesImageContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 20px 20px;
+  background-color: #2d2d2d;
+
+  font-size: 32px;
+  text-align: center;
+  color: #f9f9f9;
+}
+
+.paginationLeveler {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+  pointer-events: none;
+}
+
+.paginationContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paginationButton {
+  font-size: 32px;
+  margin: 0 20px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #f9f9f9;
+  pointer-events: auto;
+}
+
+.paginationButton:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
   .sectionTitle {
     font-size: 16px;
@@ -61,5 +132,16 @@
     max-width: calc(100% - 32px);
     margin: 0 auto;
     gap: 20px;
+  }
+
+  .paginationButton {
+    font-size: 20px;
+    margin: 0 10px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #f9f9f9;
+    pointer-events: auto;
   }
 }

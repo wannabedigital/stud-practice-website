@@ -2,7 +2,7 @@
 
 // Imports
 import Link from 'next/link';
-import { useState, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 // Styles (home page)
 import styles from '@styles/homePageStyles/homeSales.module.css';
@@ -12,33 +12,37 @@ import { DividerDesktop, DividerMobile } from '@/components/Dividers';
 
 const SaleCard = ({ sale }) => {
   return (
-    <div className={styles.salesContainer}>
-      <Link href={'#'} className={styles.salesLink}>
-        <h2
-          className={`${styles.containerTitle} ${styles.reasonContainerTitle}`}
-        >
+    <div className={styles.saleContainer}>
+      <Link href={'#'} className={styles.saleLink}>
+        <h2 className={`${styles.containerTitle} ${styles.saleContainerTitle}`}>
           Акция {sale.id}
         </h2>
-        <p>{sale.title}</p>
+        <div className={styles.salesImageContainer}>{sale.title}</div>
       </Link>
     </div>
   );
 };
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+  const goBack = () => {
+    onPageChange(currentPage === 1 ? totalPages : currentPage - 1);
+  };
+
+  const goForward = () => {
+    onPageChange(currentPage === totalPages ? 1 : currentPage + 1);
+  };
+
   return (
-    <div>
+    <div className={styles.paginationContainer}>
       <button
-        onClick={() => onPageChange(Math.max(1, currentPage - 1))}
+        onClick={goBack}
         className={`${styles.paginationButton} ${styles.backButton}`}
-        disabled={currentPage === 1}
       >
         {'\u21D0'}
       </button>
       <button
-        onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
+        onClick={goForward}
         className={`${styles.paginationButton} ${styles.forwardButton}`}
-        disabled={currentPage === totalPages}
       >
         {'\u21D2'}
       </button>
@@ -48,7 +52,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
 const HomeSales = ({ sales = [] }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 2;
+  const itemsPerPage = 1;
 
   const { totalPages, currentSales } = useMemo(() => {
     const total = Math.ceil(sales.length / itemsPerPage);
@@ -57,10 +61,16 @@ const HomeSales = ({ sales = [] }) => {
     return { totalPages: total || 1, currentSales: current };
   }, [sales, currentPage]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPage(prev => (!!(prev % totalPages) ? prev + 1 : 1));
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [totalPages]);
+
   return (
-    <div
-      className={`${styles.contentContainer} ${styles.homeReasonsSectionContent}`}
-    >
+    <div className={styles.contentContainer}>
       <h1 className={styles.sectionTitle}>НАШИ АКЦИИ</h1>
 
       <div className={styles.desktopDivider}>
@@ -70,16 +80,19 @@ const HomeSales = ({ sales = [] }) => {
       <div className={styles.mobileDivider}>
         <DividerMobile color={'#304B73'} />
       </div>
-
-      {!!currentSales.length &&
-        currentSales.map(sale => <SaleCard key={sale.id} sale={sale} />)}
-      {totalPages > 1 && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={setCurrentPage}
-        />
-      )}
+      <div className={styles.salesContainer}>
+        {!!currentSales.length &&
+          currentSales.map(sale => <SaleCard key={sale.id} sale={sale} />)}
+      </div>
+      <div className={styles.paginationLeveler}>
+        {totalPages > 1 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+        )}
+      </div>
     </div>
   );
 };
