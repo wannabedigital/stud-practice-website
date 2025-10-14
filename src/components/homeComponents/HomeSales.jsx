@@ -2,6 +2,7 @@
 // Imports
 import Link from 'next/link';
 import { useState, useEffect, useMemo } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 // Styles (home page)
 import styles from '@styles/homePageStyles/homeSales.module.css';
@@ -24,11 +25,11 @@ const SaleCard = ({ sale }) => {
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const goBack = () => {
-    onPageChange(currentPage === 1 ? totalPages : currentPage - 1);
+    onPageChange(currentPage === 1 ? totalPages : currentPage - 1, -1);
   };
 
   const goForward = () => {
-    onPageChange(currentPage === totalPages ? 1 : currentPage + 1);
+    onPageChange(currentPage === totalPages ? 1 : currentPage + 1, 1);
   };
 
   return (
@@ -51,6 +52,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
 const HomeSales = ({ sales = [] }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [direction, setDirection] = useState(1);
   const itemsPerPage = 1;
 
   const { totalPages, currentSales } = useMemo(() => {
@@ -62,11 +64,32 @@ const HomeSales = ({ sales = [] }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setDirection(1);
       setCurrentPage(prev => (!!(prev % totalPages) ? prev + 1 : 1));
-    }, 3000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [totalPages]);
+
+  const handlePageChange = (page, dir) => {
+    setDirection(dir);
+    setCurrentPage(page);
+  };
+
+  const animations = {
+    enter: dir => ({
+      x: dir > 0 ? 100 : -100,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: dir => ({
+      x: dir > 0 ? -100 : 100,
+      opacity: 0,
+    }),
+  };
 
   return (
     <div className={styles.contentContainer}>
@@ -80,15 +103,33 @@ const HomeSales = ({ sales = [] }) => {
         <DividerMobile color={'#304B73'} />
       </div>
       <div className={styles.salesContainer}>
-        {!!currentSales.length &&
-          currentSales.map(sale => <SaleCard key={sale.id} sale={sale} />)}
+        <AnimatePresence mode="wait" custom={direction}>
+          {!!currentSales.length &&
+            currentSales.map(sale => (
+              <motion.div
+                key={sale.id}
+                className={styles.saleWrapper}
+                custom={direction}
+                variants={animations}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: 'spring', duration: 0.4 },
+                  opacity: { duration: 0.2 },
+                }}
+              >
+                <SaleCard sale={sale} />
+              </motion.div>
+            ))}
+        </AnimatePresence>
       </div>
       <div className={styles.paginationLeveler}>
         {totalPages > 1 && (
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
-            onPageChange={setCurrentPage}
+            onPageChange={handlePageChange}
           />
         )}
       </div>

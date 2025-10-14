@@ -42,8 +42,9 @@
   display: flex;
 }
 
-.saleContainer {
+.saleWrapper {
   width: 100%;
+  min-width: 100%;
 }
 
 .saleLink,
@@ -107,6 +108,12 @@
 .paginationButton:active,
 .paginationButton:hover {
   opacity: 0.5;
+}
+
+.nextPrerenderedCard {
+  position: absolute;
+  width: 100%;
+  z-index: -1000;
 }
 
 @media (max-width: 768px) {

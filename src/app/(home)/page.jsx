@@ -4,13 +4,13 @@ import styles from '@styles/homePageStyles/homePage.module.css';
 // Components, Constants, etc.
 import HomeServices from '@components/homeComponents/HomeServices';
 import HomeReasons from '@components/homeComponents/HomeReasons';
-import HomeSales from '@components/homeComponents/HomeSales';
+import HomeSales from '@/components/homeComponents/HomeSalesDynamicWrapper';
 import { SALES_API_URL } from '@/constants/salesData';
 
 export default async function Home() {
   try {
     const response = await fetch(SALES_API_URL, {
-      next: { revalidate: 60 },
+      next: { revalidate: 600 },
     });
 
     const sales = await response.json();
