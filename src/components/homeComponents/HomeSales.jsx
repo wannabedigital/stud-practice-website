@@ -28,13 +28,16 @@ const HomeSalesCarousel = ({ sales = [] }) => {
       className={styles.carouselSlider}
       spaceBetween={0}
       slidesPerView={'auto'}
+      touchRatio={1}
+      touchAngle={45}
+      threshold={10}
       autoplay={{
         delay: 5000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      speed={6000}
+      speed={100}
       loop={true}
     >
       {sales.map(sale => (
