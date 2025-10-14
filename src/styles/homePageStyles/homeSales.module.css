@@ -36,23 +36,19 @@
   letter-spacing: 0.05em;
 }
 
+.carouselSlider {
+  border-radius: 20px;
+}
+
 .salesContainer {
   width: 100%;
-  /* max-width: calc(100% - 120px); */
   display: flex;
 }
 
-.saleWrapper {
-  width: 100%;
-  min-width: 100%;
-}
-
-.saleLink,
-.saleLink:hover {
+.saleContainer {
   position: relative;
   width: 100%;
   height: 500px;
-  border-radius: 5px;
   background-color: #f9f9f9;
   display: grid;
   grid-template-columns: 1fr;
@@ -68,52 +64,12 @@
 .salesImageContainer {
   width: 100%;
   height: 100%;
-  border-radius: 0 0 5px 5px;
   background-color: #2d2d2d;
   padding: 40px;
 
   font-size: 32px;
   text-align: center;
   color: #f9f9f9;
-}
-
-.paginationLeveler {
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  display: flex;
-  align-items: end;
-  pointer-events: none;
-}
-
-.paginationContainer {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.paginationButton {
-  font-size: 32px;
-  margin: 0 20px;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  background-color: #f9f9f9;
-  pointer-events: auto;
-  opacity: 0.6;
-}
-
-.paginationButton:active,
-.paginationButton:hover {
-  opacity: 0.5;
-}
-
-.nextPrerenderedCard {
-  position: absolute;
-  width: 100%;
-  z-index: -1000;
 }
 
 @media (max-width: 768px) {
@@ -154,23 +110,10 @@
     font-weight: 400;
   }
 
-  .paginationButton {
-    font-size: 20px;
-    margin: 0 10px;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    background-color: #f9f9f9;
-    pointer-events: auto;
-  }
-
-  .saleLink,
-  .saleLink:hover {
+  .saleLink {
     position: relative;
     width: 100%;
     height: 200px;
-    border-radius: 5px;
     background-color: #f9f9f9;
     display: grid;
     grid-template-columns: 1fr;
