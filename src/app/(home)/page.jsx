@@ -6,16 +6,25 @@ import HomeServices from '@components/homeComponents/HomeServices';
 import HomeReasons from '@components/homeComponents/HomeReasons';
 import HomeSales from '@components/homeComponents/HomeSalesDynamicWrapper';
 import HomeCall from '@components/homeComponents/HomeCallDynamicWrapper';
-import { SALES_API_URL } from '@/constants/salesData';
+
+const SALES_API_URL = `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}`;
+const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
 
 export default async function Home() {
   try {
     const response = await fetch(SALES_API_URL, {
-      next: { revalidate: 600 },
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_TOKEN}`,
+      },
+      next: { revalidate: 1 },
     });
 
-    const sales = await response.json();
-
+    const data = await response.json();
+    const sales = data.records.map(record => ({
+      id: record.id,
+      title: record.fields.title || '',
+      src: record.fields.img?.[0]?.url || '',
+    }));
     return (
       <main className={styles.page}>
         <HomeServices />

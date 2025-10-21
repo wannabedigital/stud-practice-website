@@ -1,5 +1,6 @@
 'use client';
 // Imports
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -11,12 +12,27 @@ import styles from '@styles/homePageStyles/homeSales.module.css';
 import { DividerDesktop, DividerMobile } from '@/components/Dividers';
 
 const SaleCard = ({ sale }) => {
+  const isSVG = sale.src.endsWith('.svg');
+
   return (
     <div className={styles.saleContainer}>
       <h2 className={`${styles.containerTitle} ${styles.saleContainerTitle}`}>
-        Акция {sale.id}
+        {sale.title}
       </h2>
-      <div className={styles.salesImageContainer}>{sale.title}</div>
+      <div className={styles.salesImageContainer}>
+        {!!sale.src &&
+          (isSVG ? (
+            <Image src={sale.src} alt={sale.title} fill loading="lazy" />
+          ) : (
+            <Image
+              src={sale.src}
+              alt={sale.title}
+              fill
+              unoptimized
+              loading="lazy"
+            />
+          ))}
+      </div>
     </div>
   );
 };
