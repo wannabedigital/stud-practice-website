@@ -16,7 +16,7 @@ export default async function Home() {
       headers: {
         Authorization: `Bearer ${AIRTABLE_TOKEN}`,
       },
-      next: { revalidate: 1 },
+      next: { revalidate: 600 },
     });
 
     const data = await response.json();

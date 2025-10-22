@@ -2,7 +2,7 @@
 // Imports
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
 // Styles (home page)
@@ -52,9 +52,13 @@ const HomeSalesCarousel = ({ sales = [] }) => {
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
       }}
-      modules={[Autoplay]}
-      speed={100}
+      modules={[Autoplay, Mousewheel]}
+      speed={200}
       loop={true}
+      mousewheel={{
+        sensitivity: 0.1,
+        releaseOnEdges: true,
+      }}
     >
       {sales.map(sale => (
         <SwiperSlide key={sale.id}>
