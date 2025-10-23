@@ -1,7 +1,7 @@
 // Styles (home page)
 import styles from '@styles/homePageStyles/homePage.module.css';
 
-// Components, Constants, etc.
+// Components, Constants, etc
 import HomeServices from '@components/homeComponents/HomeServices';
 import HomeReasons from '@components/homeComponents/HomeReasons';
 import HomeSales from '@components/homeComponents/HomeSalesDynamicWrapper';

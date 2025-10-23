@@ -2,11 +2,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Styles (home page)
+// Styles, components, configs, etc
 import styles from '@styles/homePageStyles/homeCall.module.css';
-
-// Components
 import { DividerDesktop, DividerMobile } from '@components/Dividers';
+import { CONTACTS } from '@config/contacts.config';
+import { PAGES } from '@config/pages.config';
 
 const HomeCall = () => {
   return (
@@ -33,11 +33,11 @@ const HomeCall = () => {
           <p>Наши специалисты сэкономят Ваше время и деньги.</p>
         </div>
         <div className={styles.callConteiner}>
-          <a href="tel:+79999999999" className={styles.callButton}>
-            <span>+7 (999) 999-99-99</span>
+          <a href={CONTACTS.PHONE.link} className={styles.callButton}>
+            <span>{CONTACTS.PHONE.visible}</span>
             <span className={styles.callButtonFlare} />
           </a>
-          <Link href="/contacts" className={styles.askForCall}>
+          <Link href={PAGES.CONTACTS.path} className={styles.askForCall}>
             или закажите звонок
           </Link>
         </div>

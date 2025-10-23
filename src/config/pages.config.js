@@ -1,7 +1,30 @@
 export const PAGES = {
-  HOME: { path: '/' },
-  SERVICES: { path: '/services' },
-  ABOUT: { path: '/about' },
-  CONTACTS: { path: '/contacts' },
-  REVIEWS: { path: '/reviews' },
+  HOME: {
+    path: '/',
+    visible: 'Главная',
+  },
+  SERVICES: {
+    path: '/services',
+    visible: 'Услуги',
+  },
+  ABOUT: {
+    path: '/about',
+    visible: 'О нас',
+  },
+  CONTACTS: {
+    path: '/contacts',
+    visible: 'Контакты',
+  },
+  REVIEWS: {
+    path: '/reviews',
+    visible: 'Отзывы',
+  },
+  PRIVACY: {
+    path: '/',
+    visible: 'Политика конфиденциальности',
+  },
+  USERAGREE: {
+    path: '/',
+    visible: 'Пользовательское соглашение',
+  },
 };
