@@ -1,20 +1,11 @@
-// Image
-import Image from 'next/image';
-
-// Styles (home page)
+// Styles, components, etc
 import styles from '@styles/homePageStyles/homePage.module.css';
+import InDeveloping from '@/components/InDeveloping';
 
-export default function Home() {
+export default function Contacts() {
   return (
     <main className={styles.page}>
-      <Image
-        className={styles.logo}
-        src={'/img/logo.png'}
-        alt="logo"
-        width={760}
-        height={98}
-        priority
-      />
+      <InDeveloping />
     </main>
   );
 }
