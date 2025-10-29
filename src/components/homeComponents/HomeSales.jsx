@@ -12,7 +12,7 @@ import styles from '@styles/homePageStyles/homeSales.module.css';
 import { DividerDesktop, DividerMobile } from '@/components/Dividers';
 
 const SaleCard = ({ sale }) => {
-  const isSVG = sale.src.endsWith('.svg');
+  const isSVG = sale.img.endsWith('.svg');
 
   return (
     <div className={styles.saleContainer}>
@@ -20,12 +20,12 @@ const SaleCard = ({ sale }) => {
         {sale.title}
       </h2>
       <div className={styles.salesImageContainer}>
-        {!!sale.src &&
+        {!!sale.img &&
           (isSVG ? (
-            <Image src={sale.src} alt={sale.title} fill loading="lazy" />
+            <Image src={sale.img} alt={sale.title} fill loading="lazy" />
           ) : (
             <Image
-              src={sale.src}
+              src={sale.img}
               alt={sale.title}
               fill
               unoptimized
