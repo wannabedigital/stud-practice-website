@@ -1,11 +1,11 @@
 // Styles, components, etc
 import styles from '@styles/homePageStyles/homePage.module.css';
-import ServicesList from '@components/servicesComponents/ServicesList';
+import InDeveloping from '@/components/InDeveloping';
 
 export default function Services() {
   return (
     <main className={styles.page}>
-      <ServicesList />
+      <InDeveloping />
     </main>
   );
 }

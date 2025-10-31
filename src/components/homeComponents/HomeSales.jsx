@@ -25,7 +25,7 @@ const SaleCard = ({ sale }) => {
   );
 };
 
-const SmallHomeSalesCarousel = ({ sales = [] }) => {
+const HomeSalesCarousel = ({ sales = [] }) => {
   const [emblaRef] = useEmblaCarousel(
     { loop: true, align: 'start', dragFree: false },
     [
@@ -65,7 +65,7 @@ const HomeSales = ({ sales = [] }) => {
         <DividerMobile color={'#304B73'} />
       </div>
       <div className={styles.salesContainer}>
-        <SmallHomeSalesCarousel sales={sales} />
+        <HomeSalesCarousel sales={sales} />
       </div>
     </div>
   );
