@@ -9,29 +9,18 @@ import 'swiper/css';
 import styles from '@styles/homePageStyles/homeSales.module.css';
 
 // Components
-import { DividerDesktop, DividerMobile } from '@/components/Dividers';
+import { DividerDesktop, DividerMobile } from '@components/Dividers';
 
 const SaleCard = ({ sale }) => {
-  const isSVG = sale.img.endsWith('.svg');
-
   return (
     <div className={styles.saleContainer}>
       <h2 className={`${styles.containerTitle} ${styles.saleContainerTitle}`}>
         {sale.title}
       </h2>
       <div className={styles.salesImageContainer}>
-        {!!sale.img &&
-          (isSVG ? (
-            <Image src={sale.img} alt={sale.title} fill loading="lazy" />
-          ) : (
-            <Image
-              src={sale.img}
-              alt={sale.title}
-              fill
-              unoptimized
-              loading="lazy"
-            />
-          ))}
+        {!!sale.img && (
+          <Image src={sale.img} alt={sale.title} fill loading="lazy" />
+        )}
       </div>
     </div>
   );

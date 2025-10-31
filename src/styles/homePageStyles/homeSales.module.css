@@ -112,7 +112,7 @@
 
   .saleContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 6fr 7fr;
   }
 
   .saleContainerTitle {
@@ -127,5 +127,9 @@
 
   .saleContainer {
     height: 200px;
+  }
+
+  .salesImageContainer img {
+    object-fit: cover;
   }
 }
