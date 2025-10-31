@@ -83,6 +83,31 @@
   color: #f9f9f9;
 }
 
+.embla {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 20px;
+  cursor: grab;
+}
+
+.embla:active {
+  cursor: grabbing;
+}
+
+.emblaContainer {
+  display: flex;
+  width: 100%;
+}
+
+.emblaSlide {
+  flex: 0 0 100%;
+  display: flex;
+}
+
+.slideContainer {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .sectionTitle {
     font-size: 16px;

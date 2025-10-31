@@ -1,9 +1,8 @@
 'use client';
 // Imports
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Mousewheel } from 'swiper/modules';
-import 'swiper/css';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 // Styles (home page)
 import styles from '@styles/homePageStyles/homeSales.module.css';
@@ -26,37 +25,30 @@ const SaleCard = ({ sale }) => {
   );
 };
 
-const HomeSalesCarousel = ({ sales = [] }) => {
-  return (
-    <Swiper
-      id="carousel-slider"
-      className={styles.carouselSlider}
-      spaceBetween={0}
-      slidesPerView={'auto'}
-      touchRatio={1}
-      touchAngle={45}
-      threshold={10}
-      autoplay={{
+const SmallHomeSalesCarousel = ({ sales = [] }) => {
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, align: 'start', dragFree: false },
+    [
+      Autoplay({
         delay: 5000,
-        pauseOnMouseEnter: true,
-        disableOnInteraction: false,
-      }}
-      modules={[Autoplay, Mousewheel]}
-      speed={200}
-      loop={true}
-      mousewheel={{
-        sensitivity: 0.1,
-        releaseOnEdges: true,
-      }}
-    >
-      {sales.map(sale => (
-        <SwiperSlide key={sale.id}>
-          <div className={styles.slideContainer}>
-            <SaleCard sale={sale} />
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    ]
+  );
+
+  return (
+    <div className={styles.embla} ref={emblaRef}>
+      <div className={styles.emblaContainer}>
+        {sales.map(sale => (
+          <div className={styles.emblaSlide} key={sale.id}>
+            <div className={styles.slideContainer}>
+              <SaleCard sale={sale} />
+            </div>
           </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+        ))}
+      </div>
+    </div>
   );
 };
 
@@ -73,7 +65,7 @@ const HomeSales = ({ sales = [] }) => {
         <DividerMobile color={'#304B73'} />
       </div>
       <div className={styles.salesContainer}>
-        <HomeSalesCarousel sales={sales} />
+        <SmallHomeSalesCarousel sales={sales} />
       </div>
     </div>
   );
