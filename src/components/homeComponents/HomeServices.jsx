@@ -6,7 +6,8 @@ import Image from 'next/image';
 import styles from '@styles/homePageStyles/homeServices.module.css';
 
 // Components
-import { DividerDesktop, DividerMobile } from '@/components/Dividers';
+import { DividerDesktop, DividerMobile } from '@components/Dividers';
+import { SERVICES } from '@config/services.config';
 
 const HomeServices = () => {
   return (
@@ -43,7 +44,10 @@ const HomeServices = () => {
         </div>
 
         <div className={styles.serviceLinksContainer}>
-          <Link href={'/services'} className={styles.serviceLink}>
+          <Link
+            href={`/services/${SERVICES.INK_FILL.slug}`}
+            className={styles.serviceLink}
+          >
             <Image
               src={'/img/home/service_cartridge_icon.svg'}
               alt="cartridge icon"
@@ -57,7 +61,10 @@ const HomeServices = () => {
               <br /> КАРТРИДЖЕЙ
             </h2>
           </Link>
-          <Link href={'/services'} className={styles.serviceLink}>
+          <Link
+            href={`/services/${SERVICES.MONITOR_FIX.slug}`}
+            className={styles.serviceLink}
+          >
             <Image
               src={'/img/home/service_monitor_icon.svg'}
               alt="monitor icon"
@@ -71,7 +78,10 @@ const HomeServices = () => {
               <br /> МОНИТОРОВ
             </h2>
           </Link>
-          <Link href={'/services'} className={styles.serviceLink}>
+          <Link
+            href={`/services/${SERVICES.PRINTER_FIX.slug}`}
+            className={styles.serviceLink}
+          >
             <Image
               src={'/img/home/service_printer_icon.svg'}
               alt="printer icon"
@@ -85,7 +95,10 @@ const HomeServices = () => {
               <br /> И ПРИНТЕРОВ
             </h2>
           </Link>
-          <Link href={'/services'} className={styles.serviceLink}>
+          <Link
+            href={`/services/${SERVICES.COMPUTER_FIX.slug}`}
+            className={styles.serviceLink}
+          >
             <Image
               src={'/img/home/service_laptop_icon.svg'}
               alt="laptop icon"

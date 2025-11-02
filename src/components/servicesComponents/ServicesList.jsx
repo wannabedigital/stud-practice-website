@@ -22,11 +22,11 @@ const ServicesList = () => {
         <div className={styles.servicesContainer}>
           {Object.values(SERVICES).map(service => (
             <ServiceCard
-              key={service.slug}
+              key={service.slug.link}
               serviceIcon={service.icon}
               serviceName={service.name}
               serviceDetails={service.details}
-              serviceSlug={service.slug}
+              serviceSlug={service.slug.link}
             />
           ))}
         </div>

@@ -11,6 +11,7 @@ body {
   font-family: var(--font-roboto);
   background-image: linear-gradient(to bottom right, #d9d9d9, #dfeff3);
   min-height: 100vh;
+  position: relative;
 }
 
 a,
@@ -26,4 +27,15 @@ button:active {
 
 a:hover {
   opacity: 0.9;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+header,
+footer {
+  position: relative;
+  z-index: 2;
 }

@@ -3,6 +3,9 @@
   background-color: #304b73;
   height: 264px;
   overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 -4px 20px #00000026;
 }
 
 .footerContentContainer {

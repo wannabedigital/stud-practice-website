@@ -6,6 +6,9 @@
   font-size: 18px;
   font-weight: 500;
   align-content: center;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 20px #00000026;
 }
 
 .headerBackground {
