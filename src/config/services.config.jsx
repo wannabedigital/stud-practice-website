@@ -5,6 +5,20 @@ import {
   ComputerFixIcon,
 } from '@components/servicesComponents/ServicesIcons';
 
+import {
+  INK_FILL_DETAILS,
+  MONITOR_FIX_DETAILS,
+  PRINTER_FIX_DETAILS,
+  COMPUTER_FIX_DETAILS,
+} from '@config/service/details.config';
+
+import {
+  INK_FILL_PRICES,
+  MONITOR_FIX_PRICES,
+  PRINTER_FIX_PRICES,
+  COMPUTER_FIX_PRICES,
+} from '@config/service/price.config';
+
 export const SERVICES = {
   INK_FILL: {
     name: 'Заправка картриджей для различных принтеров',
@@ -14,7 +28,8 @@ export const SERVICES = {
     slug: {
       link: 'ink-fill',
       name: 'Заправка картриджей',
-      details: 'Детали',
+      details: INK_FILL_DETAILS,
+      price: INK_FILL_PRICES,
     },
   },
   MONITOR_FIX: {
@@ -25,7 +40,8 @@ export const SERVICES = {
     slug: {
       link: 'monitor-fix',
       name: 'Ремонт мониторов',
-      details: 'Детали',
+      details: MONITOR_FIX_DETAILS,
+      price: MONITOR_FIX_PRICES,
     },
   },
   PRINTER_FIX: {
@@ -36,7 +52,8 @@ export const SERVICES = {
     slug: {
       link: 'printer-fix',
       name: 'Ремонт Принтеров',
-      details: 'Детали',
+      details: PRINTER_FIX_DETAILS,
+      price: PRINTER_FIX_PRICES,
     },
   },
   COMPUTER_FIX: {
@@ -47,7 +64,8 @@ export const SERVICES = {
     slug: {
       link: 'computer-fix',
       name: 'Ремонт компьютеров',
-      details: 'Детали',
+      details: COMPUTER_FIX_DETAILS,
+      price: COMPUTER_FIX_PRICES,
     },
   },
 };

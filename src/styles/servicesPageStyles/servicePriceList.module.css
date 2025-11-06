@@ -1,0 +1,33 @@
+.table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid #2d2d2d;
+}
+
+.tableHeaderCell {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tableColumnTitle {
+  width: 70%;
+}
+
+.tableColumnPrice {
+  width: 30px;
+}
+
+.tableHeaderCell,
+.tableCell {
+  padding: 10px;
+  border: 3px solid #464646;
+}
+
+.tableCell {
+  font-size: 24px;
+}
+
+.tableBody .tableColumnPrice {
+  text-align: end;
+}

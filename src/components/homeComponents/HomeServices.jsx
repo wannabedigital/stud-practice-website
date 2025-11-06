@@ -45,7 +45,7 @@ const HomeServices = () => {
 
         <div className={styles.serviceLinksContainer}>
           <Link
-            href={`/services/${SERVICES.INK_FILL.slug}`}
+            href={`/services/${SERVICES.INK_FILL.slug.link}`}
             className={styles.serviceLink}
           >
             <Image
@@ -62,7 +62,7 @@ const HomeServices = () => {
             </h2>
           </Link>
           <Link
-            href={`/services/${SERVICES.MONITOR_FIX.slug}`}
+            href={`/services/${SERVICES.MONITOR_FIX.slug.link}`}
             className={styles.serviceLink}
           >
             <Image
@@ -79,7 +79,7 @@ const HomeServices = () => {
             </h2>
           </Link>
           <Link
-            href={`/services/${SERVICES.PRINTER_FIX.slug}`}
+            href={`/services/${SERVICES.PRINTER_FIX.slug.link}`}
             className={styles.serviceLink}
           >
             <Image
@@ -96,7 +96,7 @@ const HomeServices = () => {
             </h2>
           </Link>
           <Link
-            href={`/services/${SERVICES.COMPUTER_FIX.slug}`}
+            href={`/services/${SERVICES.COMPUTER_FIX.slug.link}`}
             className={styles.serviceLink}
           >
             <Image
