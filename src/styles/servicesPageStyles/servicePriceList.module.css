@@ -31,3 +31,16 @@
 .tableBody .tableColumnPrice {
   text-align: end;
 }
+
+@media (max-width: 768px) {
+  .tableHeaderCell {
+    font-size: 20px;
+  }
+  .tableCell {
+    font-size: 16px;
+  }
+
+  .tableBody .tableColumnPrice {
+    text-align: center;
+  }
+}

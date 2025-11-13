@@ -3,6 +3,7 @@ import styles from '@styles/servicesPageStyles/serviceSlug.module.css';
 import { SERVICES } from '@config/services.config';
 import { DividerDesktop, DividerMobile } from '@components/Dividers';
 import ServicePriceList from '@components/servicesComponents/PriceList';
+import AskCall from '@components/AskCall';
 
 export default async function ServicePage({ params }) {
   const { service } = await params;
@@ -54,6 +55,10 @@ export default async function ServicePage({ params }) {
           <h1 className={styles.notFound}>Услуга не найдена</h1>
         )}
       </section>
+      <AskCall
+        title={'МЫ ПОМОЖЕМ'}
+        subTitle={'Если вы не нашли услугу которая вам нужна, обратитесь к нам'}
+      />
     </main>
   );
 }

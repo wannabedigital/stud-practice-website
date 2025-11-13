@@ -1,5 +1,5 @@
 // Styles, components, etc
-import styles from '@styles/homePageStyles/homePage.module.css';
+import styles from '@styles/servicesPageStyles/servicesPage.module.css';
 import ServicesList from '@components/servicesComponents/ServicesList';
 
 export default function Services() {

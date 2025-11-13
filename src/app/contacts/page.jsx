@@ -1,11 +1,11 @@
 // Styles, components, etc
 import styles from '@styles/homePageStyles/homePage.module.css';
-import InDeveloping from '@/components/InDeveloping';
+import ContactsFeedback from '@components/contactsComponents/ContactsFeedback';
 
 export default function Contacts() {
   return (
     <main className={styles.page}>
-      <InDeveloping />
+      <ContactsFeedback />
     </main>
   );
 }

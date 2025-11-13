@@ -1,0 +1,44 @@
+.contactsListContainer {
+  padding-left: 40px;
+  font-size: 20px;
+  max-width: max-content;
+}
+
+.contactsListContainer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactsListTitle {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.contactsListLink,
+.contactsListLink:hover {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contactsListContainer {
+    font-size: 16px;
+  }
+
+  .contactsListContainer ul {
+    gap: 5px;
+  }
+
+  .contactsListTitle {
+    font-size: 14px;
+  }
+
+  .contactsListLink img {
+    width: 18px;
+    height: 18px;
+  }
+}
