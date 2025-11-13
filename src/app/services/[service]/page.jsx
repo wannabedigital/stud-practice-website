@@ -44,6 +44,7 @@ export default async function ServicePage({ params }) {
                 <div className={styles.mobileDivider}>
                   <DividerMobile color={'#304B73'} />
                 </div>
+
                 <ServicePriceList servicePrice={currentService.slug.price} />
               </div>
             </section>
@@ -52,10 +53,14 @@ export default async function ServicePage({ params }) {
           <h1 className={styles.notFound}>Услуга не найдена</h1>
         )}
       </section>
-      <AskCall
-        title={'МЫ ПОМОЖЕМ!'}
-        subTitle={'Если вы не нашли услугу которая вам нужна, обратитесь к нам'}
-      />
+      <div className={styles.askCallContainer}>
+        <AskCall
+          title={'МЫ ПОМОЖЕМ!'}
+          subTitle={
+            'Если вы не нашли услугу которая вам нужна, обратитесь к нам'
+          }
+        />
+      </div>
     </main>
   );
 }
