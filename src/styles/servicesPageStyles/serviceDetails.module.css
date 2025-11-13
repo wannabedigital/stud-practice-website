@@ -1,0 +1,50 @@
+.detailsContainer {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.detailsSubTitle {
+  font-size: 24;
+  font-weight: 600;
+}
+
+.detailsListOL,
+.detailsListUL {
+  padding-left: 40px;
+}
+
+.detailsListUL .detailsListItem {
+  list-style: circle;
+}
+
+.detailsSubTitle,
+.detailsText,
+.detailsListUL,
+.detailsListOL,
+.detailsListItem {
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+
+@media (max-width: 768px) {
+  .detailsContainer {
+    font-size: 16px;
+  }
+
+  .detailsSubTitle {
+    font-size: 20px;
+  }
+
+  .detailsListOL,
+  .detailsListUL {
+    padding-left: 20px;
+  }
+
+  .detailsSubTitle,
+  .detailsText,
+  .detailsListUL,
+  .detailsListOL,
+  .detailsListItem {
+    margin-bottom: 8px;
+  }
+}

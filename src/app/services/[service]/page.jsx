@@ -4,6 +4,7 @@ import { SERVICES } from '@config/services.config';
 import { DividerDesktop, DividerMobile } from '@components/Dividers';
 import ServicePriceList from '@components/servicesComponents/PriceList';
 import AskCall from '@components/AskCall';
+import ServiceDetails from '@components/servicesComponents/ServiceDetails';
 
 export default async function ServicePage({ params }) {
   const { service } = await params;
@@ -30,11 +31,7 @@ export default async function ServicePage({ params }) {
                   <DividerMobile color={'#304B73'} />
                 </div>
                 <div>
-                  {currentService.slug.details.map((parag, i) => (
-                    <p key={i} className={styles.sectionText}>
-                      {parag}
-                    </p>
-                  ))}
+                  <ServiceDetails details={currentService.slug.details} />
                 </div>
               </div>
             </section>
@@ -56,7 +53,7 @@ export default async function ServicePage({ params }) {
         )}
       </section>
       <AskCall
-        title={'МЫ ПОМОЖЕМ'}
+        title={'МЫ ПОМОЖЕМ!'}
         subTitle={'Если вы не нашли услугу которая вам нужна, обратитесь к нам'}
       />
     </main>
