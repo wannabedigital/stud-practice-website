@@ -1,6 +1,6 @@
 import styles from '@styles/loading.module.css';
 
-const LoadingLazy = () => {
+export default function Loading() {
   return (
     <div className={styles.loading}>
       <div className={styles.loadDots}>
@@ -12,6 +12,4 @@ const LoadingLazy = () => {
       </div>
     </div>
   );
-};
-
-export default LoadingLazy;
+}

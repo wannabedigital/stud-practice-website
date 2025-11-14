@@ -2,11 +2,11 @@
 import dynamic from 'next/dynamic';
 import LoadingLazy from '@components/LoadingLazyComponents';
 
-const HomeSales = dynamic(
-  () => import('@components/homeComponents/HomeSales'),
+const ContactsGoogleMap = dynamic(
+  () => import('@components/homeComponents/ContactsGoogleMap'),
   {
     loading: () => <LoadingLazy />,
   }
 );
 
-export default HomeSales;
+export default ContactsGoogleMap;

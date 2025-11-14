@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next';
 // Components
 import Header from '@components/Header';
 import Footer from '@components/Footer';
+import PageTransition from '@components/PageTransition';
 
 // Fonts
 import { Roboto } from 'next/font/google';
@@ -20,7 +21,7 @@ const geistRoboto = Roboto({
 
 export const metadata = {
   title: 'Скорая помощь для вашей оргтехники',
-  description: 'Сайт для компании по ремонту оргтехники',
+  description: 'Компания по ремонту оргтехники',
 };
 
 export default function RootLayout({ children }) {
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <body className={`${geistRoboto.variable}`}>
         <Header />
-        {children}
+        <PageTransition>{children}</PageTransition>
         <Footer />
         <Analytics />
       </body>

@@ -1,0 +1,18 @@
+.mapContainer {
+  width: 100%;
+  aspect-ratio: 3.6;
+  overflow: hidden;
+}
+
+.mapIframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .mapContainer {
+    aspect-ratio: 1;
+  }
+}

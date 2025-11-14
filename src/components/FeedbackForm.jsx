@@ -5,6 +5,7 @@ const FeedbackForm = () => {
     <form className={styles.feedbackForm} method="post">
       <div className={styles.fieldContainer}>
         <input
+          name="name"
           className={styles.inputField}
           type="text"
           placeholder="Ваше имя*"
@@ -13,6 +14,7 @@ const FeedbackForm = () => {
       </div>
       <div className={styles.fieldContainer}>
         <input
+          name="phoneNumber"
           className={styles.inputField}
           type="tel"
           placeholder="Ваш номер телефона*"
@@ -21,6 +23,7 @@ const FeedbackForm = () => {
       </div>
       <div className={styles.fieldContainer}>
         <textarea
+          name="message"
           className={`${styles.inputField} ${styles.inputMessage}`}
           placeholder="Ваше обращение*"
           required

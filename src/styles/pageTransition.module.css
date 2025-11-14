@@ -1,0 +1,9 @@
+.pageFadeIn {
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+
+.pageFadeOut {
+  opacity: 0;
+  transition: opacity 0.05s ease;
+}

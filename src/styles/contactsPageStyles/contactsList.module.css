@@ -26,6 +26,10 @@
 
 @media (max-width: 768px) {
   .contactsListContainer {
+    padding: 0;
+  }
+
+  .contactsListContainer {
     font-size: 16px;
   }
 
