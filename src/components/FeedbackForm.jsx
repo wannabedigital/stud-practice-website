@@ -13,7 +13,8 @@ const FeedbackForm = () => {
     e.preventDefault();
 
     const phoneDigits = phone.replace(/\D/g, '');
-    if (!/^7\d{10}$/.test(phoneDigits)) {
+
+    if (!/^(7|8)\d{10}$/.test(phoneDigits)) {
       setStatus('Введите корректный номер телефона!');
       return;
     }
