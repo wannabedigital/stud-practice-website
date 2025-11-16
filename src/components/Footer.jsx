@@ -144,7 +144,7 @@ const FooterRight = () => {
           <h3 className={styles.footerListTitle}>Контактная информация</h3>
           <li>
             <a
-              href={CONTACTS.ADDRESS.link.google}
+              href={CONTACTS.ADDRESS.link.yandex}
               className={styles.footerListLink}
             >
               <AddressIcon fill="#F9F9F9" />

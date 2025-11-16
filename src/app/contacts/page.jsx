@@ -1,13 +1,17 @@
 // Styles, components, etc
 import styles from '@styles/contactsPageStyles/contactsPage.module.css';
 import ContactsFeedback from '@components/contactsComponents/ContactsFeedback';
-import ContactsGoogleMap from '@/components/contactsComponents/ContactsGoogleMap';
+import {
+  ContactsYandexMap,
+  // ContactsGoogleMap,
+} from '@/components/contactsComponents/ContactsMaps';
 
 export default function Contacts() {
   return (
     <main className={styles.page}>
       <ContactsFeedback />
-      <ContactsGoogleMap />
+      {/* <ContactsGoogleMap /> */}
+      <ContactsYandexMap />
     </main>
   );
 }
