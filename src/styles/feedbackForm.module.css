@@ -22,7 +22,32 @@
 }
 
 .inputField:focus {
-  outline: 1px solid #f9f9f9;
+  outline: 1px solid #f9f9f966;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    outline: 1px solid #f9f9f966;
+  }
+  15% {
+    outline: 1px solid #f9f9f999;
+  }
+  30% {
+    outline: 1px solid #f9f9f9cc;
+  }
+  50% {
+    outline: 1px solid #f9f9f9;
+  }
+  65% {
+    outline: 1px solid #f9f9f9cc;
+  }
+  90% {
+    outline: 1px solid #f9f9f999;
+  }
+  100% {
+    outline: 1px solid #f9f9f966;
+  }
 }
 
 .inputMessage {

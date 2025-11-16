@@ -72,7 +72,7 @@ const Header = () => {
                     : styles.navLink
                 }
               >
-                Главная
+                {PAGES.HOME.visible}
               </Link>
             </div>
             <div className={styles.navLinkContainer}>
@@ -84,7 +84,7 @@ const Header = () => {
                     : styles.navLink
                 }
               >
-                Услуги
+                {PAGES.SERVICES.visible}
               </Link>
             </div>
             <div className={styles.navLinkContainer}>
@@ -96,7 +96,7 @@ const Header = () => {
                     : styles.navLink
                 }
               >
-                О нас
+                {PAGES.ABOUT.visible}
               </Link>
             </div>
             <div className={styles.navLinkContainer}>
@@ -108,7 +108,7 @@ const Header = () => {
                     : styles.navLink
                 }
               >
-                Контакты
+                {PAGES.CONTACTS.visible}
               </Link>
             </div>
             <div className={styles.navLinkContainer}>
@@ -120,7 +120,7 @@ const Header = () => {
                     : styles.navLink
                 }
               >
-                Отзывы
+                {PAGES.REVIEWS.visible}
               </Link>
             </div>
           </nav>

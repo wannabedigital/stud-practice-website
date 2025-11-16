@@ -1,6 +1,6 @@
 .contactsListContainer {
   padding-left: 40px;
-  font-size: 20px;
+  font-size: 24px;
   max-width: max-content;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .contactsListTitle {
-  font-size: 24px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   margin-bottom: 2px;
@@ -20,7 +20,7 @@
 .contactsListLink,
 .contactsListLink:hover {
   display: flex;
-  gap: 3px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -38,7 +38,7 @@
   }
 
   .contactsListTitle {
-    font-size: 14px;
+    font-size: 24px;
   }
 
   .contactsListLink img {
