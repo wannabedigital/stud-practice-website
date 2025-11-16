@@ -45,7 +45,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerBackground}>
         <div className={styles.headerContent}>
-          <Link href={'/'} className={styles.headerLogoContainer}>
+          <Link href={PAGES.HOME.path} className={styles.headerLogoContainer}>
             <Image
               src={'/img/new_logo.svg'}
               alt={'logo'}
