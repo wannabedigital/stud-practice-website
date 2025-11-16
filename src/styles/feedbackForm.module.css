@@ -61,6 +61,13 @@
   color: #f9f9f9;
 }
 
+.buttonStatusFlexbox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+}
+
 .buttonContainer {
   width: 30%;
   aspect-ratio: 4;
@@ -75,6 +82,10 @@
   font-size: 20px;
   font-weight: 700;
   color: #2d2d2d;
+}
+
+.status {
+  font-size: 24px;
 }
 
 @media (max-width: 768px) {
@@ -92,6 +103,10 @@
   }
 
   .submitButton {
+    font-size: 16px;
+  }
+
+  .status {
     font-size: 16px;
   }
 }
