@@ -54,7 +54,7 @@
 .saleContainer {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 700px;
   background-color: #f9f9f9;
   display: grid;
   grid-template-columns: 1fr;
@@ -67,6 +67,7 @@
   align-items: center;
   font-size: 32px;
   font-weight: 800;
+  padding: 0 40px;
 }
 
 .salesImageContainer {
@@ -81,6 +82,11 @@
   font-size: 32px;
   text-align: center;
   color: #f9f9f9;
+}
+
+.salesImageContainer img {
+  object-fit: cover;
+  pointer-events: none;
 }
 
 .embla {
@@ -143,6 +149,7 @@
   .saleContainerTitle {
     font-size: 16px;
     font-weight: 800;
+    padding: 0 30px;
   }
 
   .salesImageContainer {
