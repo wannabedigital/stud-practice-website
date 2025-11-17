@@ -74,7 +74,16 @@
   display: block;
   height: 2px;
   width: 100%;
-  background-color: #f9f9f9;
+  background: linear-gradient(
+    90deg,
+    #f9f9f9,
+    #dff3ff,
+    #b8e0ff,
+    #dff3ff,
+    #f9f9f9
+  );
+  background-size: 300% 100%;
+  animation: shimmer 16s ease-in-out infinite;
 }
 
 .footerBot {
@@ -140,5 +149,41 @@
   .footerListLink img {
     width: 18px;
     height: 18px;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0;
+  }
+  10% {
+    background-position: 20% 0;
+  }
+  20% {
+    background-position: 40% 0;
+  }
+  30% {
+    background-position: 60% 0;
+  }
+  40% {
+    background-position: 80% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  60% {
+    background-position: 80% 0;
+  }
+  70% {
+    background-position: 60% 0;
+  }
+  80% {
+    background-position: 40% 0;
+  }
+  90% {
+    background-position: 20% 0;
+  }
+  100% {
+    background-position: 0% 0;
   }
 }

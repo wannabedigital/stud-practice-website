@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 40px;
   width: 100%;
+  color: #f9f9f9;
 }
 
 .fieldContainer {
@@ -24,30 +25,6 @@
 .inputField:focus {
   outline: 2px solid #f9f9f966;
   animation: glow 3s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0% {
-    outline: 2px solid #f9f9f966;
-  }
-  15% {
-    outline: 2px solid #f9f9f999;
-  }
-  30% {
-    outline: 2px solid #f9f9f9cc;
-  }
-  50% {
-    outline: 2px solid #f9f9f9;
-  }
-  65% {
-    outline: 2px solid #f9f9f9cc;
-  }
-  90% {
-    outline: 2px solid #f9f9f999;
-  }
-  100% {
-    outline: 2px solid #f9f9f966;
-  }
 }
 
 .inputMessage {
@@ -163,6 +140,11 @@
 }
 
 @media (max-width: 768px) {
+  .buttonContainer {
+    width: 40%;
+    aspect-ratio: 3;
+  }
+
   .feedbackForm {
     gap: 20px;
   }
@@ -195,5 +177,29 @@
 
   .status {
     font-size: 16px;
+  }
+}
+
+@keyframes glow {
+  0% {
+    outline: 2px solid #f9f9f966;
+  }
+  15% {
+    outline: 2px solid #f9f9f999;
+  }
+  30% {
+    outline: 2px solid #f9f9f9cc;
+  }
+  50% {
+    outline: 2px solid #f9f9f9;
+  }
+  65% {
+    outline: 2px solid #f9f9f9cc;
+  }
+  90% {
+    outline: 2px solid #f9f9f999;
+  }
+  100% {
+    outline: 2px solid #f9f9f966;
   }
 }
