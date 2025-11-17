@@ -50,6 +50,7 @@ const FeedbackForm = () => {
           required
           value={name}
           onChange={e => setName(e.target.value)}
+          autoComplete="name"
         />
       </div>
       <div className={styles.fieldContainer}>
@@ -61,6 +62,7 @@ const FeedbackForm = () => {
           required
           value={phone}
           onChange={e => setPhone(e.target.value)}
+          autoComplete="tel"
         />
       </div>
       <div className={styles.fieldContainer}>
@@ -71,6 +73,7 @@ const FeedbackForm = () => {
           required
           value={message}
           onChange={e => setMessage(e.target.value)}
+          autoComplete="off"
         />
       </div>
       <div className={styles.buttonStatusFlexbox}>
@@ -81,7 +84,13 @@ const FeedbackForm = () => {
             value={'Отправить'}
           />
         </div>
-        {status && <p className={styles.status}>{status}</p>}
+        <div className={styles.statusContainer}>
+          {status ? (
+            <p className={styles.status}>{status}</p>
+          ) : (
+            <p className={`${styles.status} ${styles.statusHidden}`}>{''}</p>
+          )}
+        </div>
       </div>
     </form>
   );

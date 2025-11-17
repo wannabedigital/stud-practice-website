@@ -36,6 +36,7 @@
   height: auto;
   z-index: -1;
   opacity: 0.1;
+  object-fit: cover;
 }
 
 .contentContainer {
