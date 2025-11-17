@@ -19,12 +19,12 @@ export const PAGES = {
     path: '/reviews',
     visible: 'Отзывы',
   },
-  PRIVACY: {
-    path: '/',
+  PRIVACY_POLICY: {
+    path: '/legals/privacy-policy',
     visible: 'Политика конфиденциальности',
   },
-  USERAGREE: {
-    path: '/',
+  USER_AGREEMENT: {
+    path: '/legals/user-agreement',
     visible: 'Пользовательское соглашение',
   },
 };

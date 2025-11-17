@@ -125,11 +125,17 @@ const FooterLeft = () => {
         />
       </div>
       <div className={styles.footerLegal}>
-        <Link href={PAGES.PRIVACY.path} className={styles.footerLegalLink}>
-          {PAGES.PRIVACY.visible}
+        <Link
+          href={PAGES.PRIVACY_POLICY.path}
+          className={styles.footerLegalLink}
+        >
+          {PAGES.PRIVACY_POLICY.visible}
         </Link>
-        <Link href={PAGES.USERAGREE.path} className={styles.footerLegalLink}>
-          {PAGES.USERAGREE.visible}
+        <Link
+          href={PAGES.USER_AGREEMENT.path}
+          className={styles.footerLegalLink}
+        >
+          {PAGES.USER_AGREEMENT.visible}
         </Link>
       </div>
     </div>

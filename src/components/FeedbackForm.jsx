@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { PAGES } from '@config/pages.config';
 import styles from '@styles/feedbackForm.module.css';
 
 const FeedbackForm = () => {
@@ -69,13 +71,40 @@ const FeedbackForm = () => {
         <textarea
           name="message"
           className={`${styles.inputField} ${styles.inputMessage}`}
-          placeholder="Ваше обращение*"
-          required
+          placeholder="Ваше обращение"
           value={message}
           onChange={e => setMessage(e.target.value)}
           autoComplete="off"
         />
       </div>
+      <div className={styles.privacyAgreement}>
+        <label className={styles.checkboxLabel}>
+          <input className={styles.checkboxInput} type="checkbox" required />
+          <span className={styles.customCheckbox}></span>
+          <div className={styles.checkboxSpan}>
+            Я соглашаюсь с{' '}
+            <Link
+              className={styles.legalLink}
+              href={PAGES.PRIVACY_POLICY.path}
+              target="_blank"
+              rel="noopener"
+            >
+              &laquo;Политикой конфиденциальности&raquo;
+            </Link>{' '}
+            и{' '}
+            <Link
+              className={styles.legalLink}
+              href={PAGES.USER_AGREEMENT.path}
+              target="_blank"
+              rel="noopener"
+            >
+              &laquo;Пользовательским соглашением&raquo;
+            </Link>
+            .
+          </div>
+        </label>
+      </div>
+
       <div className={styles.buttonStatusFlexbox}>
         <div className={styles.buttonContainer}>
           <input
