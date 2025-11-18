@@ -64,17 +64,16 @@ const FeedbackModal = ({ onClose }) => {
     <div className={styles.feedbackPortal} onMouseDown={handleOverlayClick}>
       <div className={styles.portalContentContainer} ref={modalRef}>
         <div className={styles.modalHeader}>
-          <h2 className={styles.modalTitle}>
-            Заполните форму чтобы оставить заявку
-          </h2>
-        </div>
-        <div className={styles.divider}></div>
-        <div className={styles.modalBody}>
+          <div className={styles.rightMarginSameAsButton}></div>
+          <h2 className={styles.modalTitle}>Оставьте заявку</h2>
           <div className={styles.closeButtonWrapper}>
             <button className={styles.closeButton} onClick={onClose}>
               <CloseIcon />
             </button>
           </div>
+        </div>
+        <div className={styles.divider}></div>
+        <div className={styles.modalBody}>
           <FeedbackForm />
         </div>
       </div>

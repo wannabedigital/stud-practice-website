@@ -37,14 +37,26 @@
 
 .modalHeader {
   display: flex;
-  align-self: center;
-  justify-self: center;
+  align-content: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .modalTitle {
+  display: flex;
   font-size: 24px;
   font-weight: 600;
   text-align: center;
+}
+
+.closeButtonWrapper,
+.rightMarginSameAsButton {
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
 }
 
 .divider {
@@ -69,13 +81,6 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   gap: 40px;
-}
-
-.closeButtonWrapper {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  aspect-ratio: 1;
 }
 
 @media (max-width: 768px) {
