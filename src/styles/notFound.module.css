@@ -1,0 +1,24 @@
+.page {
+  min-height: 100svh;
+  color: #2d2d2d;
+  padding: 100px 0;
+}
+
+.notFoundContentContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.animationContainer {
+  width: 50%;
+  aspect-ratio: 1;
+}
