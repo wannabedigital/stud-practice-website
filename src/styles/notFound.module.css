@@ -9,7 +9,8 @@
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: start;
+  justify-content: space-between;
   flex-direction: row-reverse;
 }
 
@@ -30,7 +31,7 @@
 }
 
 .rightFlexbox {
-  padding: 70px 20px 0 0;
+  padding-top: 180px;
   display: flex;
   flex-direction: column;
   gap: 20px;
