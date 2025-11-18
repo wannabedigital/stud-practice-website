@@ -14,13 +14,17 @@ export default function NotFound() {
   return (
     <main className={styles.page}>
       <div className={styles.notFoundContentContainer}>
-        <h2 className={styles.pageTitle}>Такой страницы не существует</h2>
         <div className={styles.animationContainer}>
-          <Lottie animationData={animation404} loop={false} />
+          <Lottie animationData={animation404} loop />
         </div>
-        <Link href={PAGES.HOME.path} className={styles.goHomeLink}>
-          {PAGES.HOME.visible}
-        </Link>
+        <div className={styles.rightFlexbox}>
+          <h1 className={styles.pageError}>Ошибка 404</h1>
+          <h2 className={styles.pageTitle}>Страница не найдена</h2>
+          <Link href={PAGES.HOME.path} className={styles.goHomeLink}>
+            Перейти на главную
+            <span className={styles.flare} />
+          </Link>
+        </div>
       </div>
     </main>
   );
