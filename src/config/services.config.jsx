@@ -31,6 +31,13 @@ export const SERVICES = {
       details: INK_FILL_DETAILS,
       price: INK_FILL_PRICES,
     },
+    seoDescription:
+      'Профессиональная заправка картриджей для лазерных и струйных принтеров. Быстро, качественно и с гарантией стабильной печати.',
+    breadcrumbs: [
+      { name: 'Главная', item: '/' },
+      { name: 'Услуги', item: '/services' },
+      { name: 'Заправка картриджей', item: '/services/ink-fill/' },
+    ],
   },
   MONITOR_FIX: {
     name: 'Качественный ремонт мониторов',
@@ -43,6 +50,13 @@ export const SERVICES = {
       details: MONITOR_FIX_DETAILS,
       price: MONITOR_FIX_PRICES,
     },
+    seoDescription:
+      'Ремонт мониторов любой сложности: от замены матрицы до устранения проблем с подсветкой и питанием. Быстро, надёжно и с гарантией.',
+    breadcrumbs: [
+      { name: 'Главная', item: '/' },
+      { name: 'Услуги', item: '/services' },
+      { name: 'Ремонт мониторов', item: '/services/monitor-fix/' },
+    ],
   },
   PRINTER_FIX: {
     name: 'Надежный ремонт принтеров и МФУ',
@@ -51,10 +65,17 @@ export const SERVICES = {
       'Поломка принтера — не повод терять время. Мы оперативно и профессионально восстановим работу вашей оргтехники: принтеров, МФУ, сканеров и факсов — любого типа.',
     slug: {
       link: 'printer-fix',
-      name: 'Ремонт Принтеров',
+      name: 'Ремонт принтеров',
       details: PRINTER_FIX_DETAILS,
       price: PRINTER_FIX_PRICES,
     },
+    seoDescription:
+      'Профессиональный ремонт принтеров и МФУ любых моделей. Быстро устраняем ошибки, замятия, проблемы с печатью и механикой.',
+    breadcrumbs: [
+      { name: 'Главная', item: '/' },
+      { name: 'Услуги', item: '/services' },
+      { name: 'Ремонт принтеров', item: '/services/printer-fix/' },
+    ],
   },
   COMPUTER_FIX: {
     name: 'Услуги по ремонту компьютеров',
@@ -67,5 +88,12 @@ export const SERVICES = {
       details: COMPUTER_FIX_DETAILS,
       price: COMPUTER_FIX_PRICES,
     },
+    seoDescription:
+      'Диагностика и ремонт компьютеров: сбои системы, тормоза, перегрев, поломки компонентов. Решаем любые проблемы быстро и качественно.',
+    breadcrumbs: [
+      { name: 'Главная', item: '/' },
+      { name: 'Услуги', item: '/services' },
+      { name: 'Ремонт компьютеров', item: '/services/computer-fix/' },
+    ],
   },
 };

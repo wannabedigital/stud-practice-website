@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import PageTransition from '@components/PageTransition';
+import { SITE_META } from '@config/meta.config';
 
 // Fonts
 import { Roboto } from 'next/font/google';
@@ -20,8 +21,13 @@ const geistRoboto = Roboto({
 });
 
 export const metadata = {
-  title: 'Скорая помощь для вашей оргтехники',
-  description: 'Компания по ремонту оргтехники',
+  metadataBase: new URL(SITE_META.url),
+  title: {
+    default: SITE_META.title.default,
+    template: SITE_META.title.template,
+  },
+  keywords: SITE_META.keywords,
+  description: SITE_META.description,
 };
 
 export default function RootLayout({ children }) {

@@ -5,6 +5,27 @@ import { DividerDesktop, DividerMobile } from '@components/Dividers';
 import ServicePriceList from '@components/servicesComponents/PriceList';
 import AskCall from '@components/AskCall';
 import ServiceDetails from '@components/servicesComponents/ServiceDetails';
+import BreadcrumbJsonLD from '@components/BreadcrumbJsonLD';
+
+export function generateMetadata({ params }) {
+  const { service } = params;
+  const currentService = Object.values(SERVICES).find(
+    s => s.slug.link === service
+  );
+
+  const title = currentService.slug.name;
+  const description = currentService.seoDescription;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+    },
+  };
+}
 
 export default async function ServicePage({ params }) {
   const { service } = await params;
@@ -14,53 +35,57 @@ export default async function ServicePage({ params }) {
   );
 
   return (
-    <main className={styles.page}>
-      <section className={styles.contentContainer}>
-        {currentService ? (
-          <>
-            <section className={styles.serviceSection}>
-              <div className={styles.contentContainer}>
-                <h1 className={styles.sectionTitle}>
-                  {currentService.slug.name}
-                </h1>
-                <div className={styles.desktopDivider}>
-                  <DividerDesktop color={'#304B73'} />
-                </div>
+    <>
+      <main className={styles.page}>
+        <section className={styles.contentContainer}>
+          {currentService ? (
+            <>
+              <section className={styles.serviceSection}>
+                <div className={styles.contentContainer}>
+                  <h1 className={styles.sectionTitle}>
+                    {currentService.slug.name}
+                  </h1>
+                  <div className={styles.desktopDivider}>
+                    <DividerDesktop color={'#304B73'} />
+                  </div>
 
-                <div className={styles.mobileDivider}>
-                  <DividerMobile color={'#304B73'} />
+                  <div className={styles.mobileDivider}>
+                    <DividerMobile color={'#304B73'} />
+                  </div>
+                  <div>
+                    <ServiceDetails details={currentService.slug.details} />
+                  </div>
                 </div>
-                <div>
-                  <ServiceDetails details={currentService.slug.details} />
-                </div>
-              </div>
-            </section>
-            <section className={styles.serviceSection}>
-              <div className={styles.contentContainer}>
-                <h1 className={styles.sectionTitle}>ПРАЙС ЛИСТ</h1>
-                <div className={styles.desktopDivider}>
-                  <DividerDesktop color={'#304B73'} />
-                </div>
-                <div className={styles.mobileDivider}>
-                  <DividerMobile color={'#304B73'} />
-                </div>
+              </section>
+              <section className={styles.serviceSection}>
+                <div className={styles.contentContainer}>
+                  <h1 className={styles.sectionTitle}>ПРАЙС ЛИСТ</h1>
+                  <div className={styles.desktopDivider}>
+                    <DividerDesktop color={'#304B73'} />
+                  </div>
+                  <div className={styles.mobileDivider}>
+                    <DividerMobile color={'#304B73'} />
+                  </div>
 
-                <ServicePriceList servicePrice={currentService.slug.price} />
-              </div>
-            </section>
-          </>
-        ) : (
-          <h1 className={styles.notFound}>Услуга не найдена</h1>
-        )}
-      </section>
-      <div className={styles.askCallContainer}>
-        <AskCall
-          title={'МЫ ПОМОЖЕМ!'}
-          subTitle={
-            'Если вы не нашли услугу которая вам нужна, обратитесь к нам'
-          }
-        />
-      </div>
-    </main>
+                  <ServicePriceList servicePrice={currentService.slug.price} />
+                </div>
+              </section>
+            </>
+          ) : (
+            <h1 className={styles.notFound}>Услуга не найдена</h1>
+          )}
+        </section>
+        <div className={styles.askCallContainer}>
+          <AskCall
+            title={'МЫ ПОМОЖЕМ!'}
+            subTitle={
+              'Если вы не нашли услугу которая вам нужна, обратитесь к нам'
+            }
+          />
+        </div>
+      </main>
+
+      <BreadcrumbJsonLD breadcrumbs={currentService.breadcrumbs} />
+    </>
   );
 }

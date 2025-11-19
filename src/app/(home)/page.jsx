@@ -7,14 +7,20 @@ import HomeReasons from '@components/homeComponents/HomeReasons';
 import HomeSales from '@components/homeComponents/HomeSalesDynamicWrapper';
 import HomeCall from '@components/homeComponents/HomeCallDynamicWrapper';
 import sales from '@data/sales.json';
+import BreadcrumbJsonLD from '@components/BreadcrumbJsonLD';
+import { PAGES } from '@config/pages.config';
 
 export default async function Home() {
   return (
-    <main className={styles.page}>
-      <HomeServices />
-      <HomeReasons />
-      <HomeSales sales={sales} />
-      <HomeCall />
-    </main>
+    <>
+      <main className={styles.page}>
+        <HomeServices />
+        <HomeReasons />
+        <HomeSales sales={sales} />
+        <HomeCall />
+      </main>
+
+      <BreadcrumbJsonLD breadcrumbs={PAGES.HOME.breadcrumbs} />
+    </>
   );
 }
