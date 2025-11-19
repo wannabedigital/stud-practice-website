@@ -28,6 +28,9 @@ export const metadata = {
   },
   keywords: SITE_META.keywords,
   description: SITE_META.description,
+  verification: {
+    google: 'kC9XgkY1a-sdXZETgNc7xlYmYVRYK3s_Byl0EWbb44E',
+  },
 };
 
 export default function RootLayout({ children }) {
