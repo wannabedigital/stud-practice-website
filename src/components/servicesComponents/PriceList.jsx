@@ -25,7 +25,7 @@ const ServicePriceList = ({ servicePrice = [{}] }) => {
                 {row.title}
               </td>
               <td className={`${styles.tableCell} ${styles.tableColumnPrice}`}>
-                {row.price}
+                {row.price}₽
               </td>
             </tr>
           ))}
